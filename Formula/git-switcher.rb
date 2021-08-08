@@ -30,7 +30,7 @@ class GitSwitcher < Formula
   depends_on "git" => :optional
 
   def install
-    bin.install "gitswitcher"
+    bin.install "git-switcher"
   end
 
   test do
