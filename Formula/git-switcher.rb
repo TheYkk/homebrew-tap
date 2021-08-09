@@ -7,7 +7,7 @@ class GitSwitcher < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/github.com/TheYkk/git-switcher/releases/download/0.0.2/git-switcher_0.0.2_Darwin_x86_64.tar.gz"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.0.2/git-switcher_0.0.2_Darwin_x86_64.tar.gz"
       sha256 "bafbb89d491cc6ad3f1c191d3b2d1c62b28703b6768ccd9464bcecd1a6339a0a"
     end
     if Hardware::CPU.arm?
@@ -18,11 +18,11 @@ class GitSwitcher < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/github.com/TheYkk/git-switcher/releases/download/0.0.2/git-switcher_0.0.2_Linux_x86_64.tar.gz"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.0.2/git-switcher_0.0.2_Linux_x86_64.tar.gz"
       sha256 "c798534fbcef6766bbda29baa5bd153bbef5fe22babb2b48cd68d60358743d93"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/github.com/TheYkk/git-switcher/releases/download/0.0.2/git-switcher_0.0.2_Linux_arm64.tar.gz"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.0.2/git-switcher_0.0.2_Linux_arm64.tar.gz"
       sha256 "360fdfe36467c11a208ea7c22467be8826d66631737ff4e2adcf954716f6f4ab"
     end
   end
