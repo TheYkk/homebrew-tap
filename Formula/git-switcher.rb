@@ -5,21 +5,21 @@
 class GitSwitcher < Formula
   desc "Switch between your git profiles easily"
   homepage ""
-  version "0.1.1"
+  version "0.2.2"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/TheYkk/git-switcher/releases/download/0.1.1/git-switcher_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "414cd7b17e7eaa2a978b6fc74631002892bcd765d239e299e63b42426a734d40"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.2.2/git-switcher_0.2.2_Darwin_arm64.tar.gz"
+      sha256 "59d2aa6905573b299dd1743652ef6eaeba652c360e1e18e21dd9303f7871e43c"
 
       def install
         bin.install "git-switcher"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheYkk/git-switcher/releases/download/0.1.1/git-switcher_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "397ff3a1957bfa489fede1b3cd87584429082dce5f994781e98e89ba8d1a5929"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.2.2/git-switcher_0.2.2_Darwin_x86_64.tar.gz"
+      sha256 "9d41d921c7962f91ab0c912c33d34b4d18302b4218938a15916b3528f93c9d48"
 
       def install
         bin.install "git-switcher"
@@ -28,17 +28,17 @@ class GitSwitcher < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/TheYkk/git-switcher/releases/download/0.1.1/git-switcher_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "bd20627e00ebd15218fa54988eda77a4c7ec5bdb37ffc40dcfbd737553569024"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.2.2/git-switcher_0.2.2_Linux_arm64.tar.gz"
+      sha256 "92f3736d4150f6afe883e4097660a234a720c57800036f7d8741c1ec6f515925"
 
       def install
         bin.install "git-switcher"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TheYkk/git-switcher/releases/download/0.1.1/git-switcher_0.1.1_Linux_arm64.tar.gz"
-      sha256 "55a2b06ea5ad42f318d3bf4ec0b15b982d639d1e8317ab32e7f76976fb81b7de"
+    if Hardware::CPU.intel?
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.2.2/git-switcher_0.2.2_Linux_x86_64.tar.gz"
+      sha256 "b2fc4fd35cf185cc538448971221f0355342db19828f760f0d119d3dad191948"
 
       def install
         bin.install "git-switcher"
