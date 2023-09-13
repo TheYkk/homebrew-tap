@@ -5,21 +5,21 @@
 class GitSwitcher < Formula
   desc "Switch between your git profiles easily"
   homepage ""
-  version "0.2.2"
+  version "0.3"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/TheYkk/git-switcher/releases/download/0.2.2/git-switcher_0.2.2_Darwin_arm64.tar.gz"
-      sha256 "59d2aa6905573b299dd1743652ef6eaeba652c360e1e18e21dd9303f7871e43c"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.3/git-switcher_Darwin_arm64.tar.gz"
+      sha256 "a813ab89e1cb91b767cfdead0e16f8171bff7c4dd129604c04f531c6950b3567"
 
       def install
         bin.install "git-switcher"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheYkk/git-switcher/releases/download/0.2.2/git-switcher_0.2.2_Darwin_x86_64.tar.gz"
-      sha256 "9d41d921c7962f91ab0c912c33d34b4d18302b4218938a15916b3528f93c9d48"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.3/git-switcher_Darwin_x86_64.tar.gz"
+      sha256 "1bfe0b3a1bc1b77d192c4268b02e5e724a0a4cdb081f2131d76af9ffa63913af"
 
       def install
         bin.install "git-switcher"
@@ -29,16 +29,16 @@ class GitSwitcher < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TheYkk/git-switcher/releases/download/0.2.2/git-switcher_0.2.2_Linux_arm64.tar.gz"
-      sha256 "92f3736d4150f6afe883e4097660a234a720c57800036f7d8741c1ec6f515925"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.3/git-switcher_Linux_arm64.tar.gz"
+      sha256 "d65428c3a9228818afdb577dfa1b8c5a77bde28363ab8455846ede0f76876fac"
 
       def install
         bin.install "git-switcher"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TheYkk/git-switcher/releases/download/0.2.2/git-switcher_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "b2fc4fd35cf185cc538448971221f0355342db19828f760f0d119d3dad191948"
+      url "https://github.com/TheYkk/git-switcher/releases/download/0.3/git-switcher_Linux_x86_64.tar.gz"
+      sha256 "156838751ad48a3b5965cfb6041231b28ed14c9abbee37defc433b6c9add6ffe"
 
       def install
         bin.install "git-switcher"
